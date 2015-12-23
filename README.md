@@ -1,2 +1,8 @@
-# explora_working_time
-This is a Chrome extension that allow people storing their working hours in Explora v. 3.0.0.0 web to calculate the total amount of hors worked in the Explora selected period
+
+manifest.json
+-------------
+* content script:
+** hanno accesso al DOM della pagina corrente
+** non hanno accesso alle api di chrome (tranne alcune parti di chrome.extension)
+
+https://robots.thoughtbot.com/how-to-make-a-chrome-extension
