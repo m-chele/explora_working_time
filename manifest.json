@@ -15,7 +15,7 @@
     ],
     "content_scripts": [ {
       "js": [ "jquery.min.js", "calculate.js" ],
-      "matches": [ "http://*/*", "https://*/*"]
+      "matches": [ "<all_urls>"]
       }],
       "background": {
         "scripts": ["background.js"]
