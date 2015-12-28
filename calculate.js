@@ -6,12 +6,15 @@
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "clicked_browser_action" ) {
-      var entrate = "";
-      $(".entrata").each(function() {
-        entrate += " " + $(this).attr("title");
+      
+
+      $("#cartTable tr").each(function(){
+        var validSpanCount = $(this).find("span.entrata").size() + $(this).find("span.uscita").size();
+        if(validSpanCount > 0 && validSpanCount != 4)
+        {
+          $(this).css("background-color","red");
+        }
       });
-
-
-      alert("entrate: " + entrate);
     }
-  });
+});
+
