@@ -14,7 +14,7 @@
     "https://ajax.googleapis.com/"
     ],
     "content_scripts": [ {
-      "js": [ "jquery.min.js", "calculate.js" ],
+      "js": [ "jquery.min.js", "explora_content.js", "calculate.js" ],
       "matches": [ "<all_urls>"]
       }],
       "background": {
