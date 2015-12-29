@@ -5,7 +5,9 @@ chrome.runtime.onMessage.addListener(
     if( request.message === "clicked_browser_action" ) {
          
       $("#cartTable tr").each(function(){
-        var validSpanCount = $(this).find("span.entrata").size() + $(this).find("span.uscita").size();
+        var checkinSpan = $(this).find("span.entrata");
+        var checkoutSpan = $(this).find("span.uscita");
+        var validSpanCount = checkinSpan.size() + checkoutSpan.size();
         if(validSpanCount > 0 && validSpanCount != 4)
         {
           $(this).css("background-color","red");
@@ -13,7 +15,13 @@ chrome.runtime.onMessage.addListener(
 
         if(validSpanCount == 4)
         {
-            alert("E= " + $(this).find("span.entrata").first().text() + " U= " + $(this).find("span.uscita").first().text());            
+          var morningCheckin = $(checkinSpan.get(0)).text()
+          var morningCheckout = $(checkoutSpan.get(0)).text()
+
+          var afternoonCheckin = $(checkinSpan.get(1)).text()
+          var afternoonCheckout = $(checkoutSpan.get(1)).text()
+          
+          alert("" + morningCheckin + "-" + morningCheckout + "\n" + afternoonCheckin + "-" + afternoonCheckout);            
         }
 
       });
