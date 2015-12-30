@@ -1,0 +1,30 @@
+﻿* html input { overflow:visible;  width:auto; }
+html { padding: 0px; margin: 0px auto; }
+body { padding: 0px; margin: 0px auto; background-color: #FFFFFF; color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; }
+form { padding: 0px; margin: 0px; }
+h1, h2, h3, h4, h5, h6 { margin: 0px; padding: 0px; }
+h1 { font-size: 18px; }
+a { color:#000000; }
+img { vertical-align:middle; border:0px solid; }
+input { border:0px solid; background-color:#FFF; }
+#divTop { display:none; }
+#divLogo { display:none; }
+#divIntest { display:none; }
+#whereTop { display:none; }
+#divBott { display:none; }
+#menuTop { display:none; }
+div#menuLeftAcc { display:none; }
+div.accordion { display:none; }
+div.accordion_toggle { display:none; }
+div.accordion_toggle_active { display:none; }
+div.accordion_content { display:none; }
+.layoutTdLeft { display:none; }
+.buttonFiltro { display:none; }
+.buttonStampa { display:none; }
+.bgHead { display:none; }
+td.textRight a { display:none; }
+.ToolTipDiv { border:0px solid; background-color:#FFF; padding:0px; margin:0px; }
+.dontPrint { display:none; }
+.cartellinoTB { color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width:100%; }
+.cartellinoTB TD { padding:0px; margin:0px; }
+.nominPerStampa { display:block; font-size:16px; font-weight:bold; }
