@@ -4,6 +4,7 @@ chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "clicked_browser_action" ) {
          
+      var workedMilliseconds = 0;
       $("#cartTable tr").each(function(){
         var checkinSpan = $(this).find("span.entrata");
         var checkoutSpan = $(this).find("span.uscita");
@@ -15,15 +16,20 @@ chrome.runtime.onMessage.addListener(
 
         if(validSpanCount == 4)
         {
-          var morningCheckin = $(checkinSpan.get(0)).text()
-          var morningCheckout = $(checkoutSpan.get(0)).text()
+          var morningCheckin = getMillisecondsFromText($(checkinSpan.get(0)).text());
+          var morningCheckout =  getMillisecondsFromText($(checkoutSpan.get(0)).text());
 
-          var afternoonCheckin = $(checkinSpan.get(1)).text()
-          var afternoonCheckout = $(checkoutSpan.get(1)).text()
+          var afternoonCheckin =  getMillisecondsFromText($(checkinSpan.get(1)).text());
+          var afternoonCheckout = getMillisecondsFromText($(checkoutSpan.get(1)).text()); 
           
-          alert("" + morningCheckin + "-" + morningCheckout + "\n" + afternoonCheckin + "-" + afternoonCheckout);            
+
+          workedMilliseconds += (morningCheckout - morningCheckin + afternoonCheckout - afternoonCheckin);       
+             
         }
 
       });
+      
+      alert(workedTime(workedMilliseconds));
+
     }
 });
