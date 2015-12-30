@@ -7,7 +7,7 @@ function extractTime(textTime){
 
 function getMillisecondsFromText(textTime) {  
 
-  return new Date("01/01/2016 " + extractTime(textTime)).getTime();
+  return new Date("01/01/1970 " + extractTime(textTime)).getTime();
 }
 
 
