@@ -24,7 +24,7 @@ describe ('Calculate' , function(){
     });
   });
 
-  describe ('time difference calculation' , function(){  
+  describe ('result rendering' , function(){  
 
     it ( 'should render worked time in hours and minutes', function(){    
 
