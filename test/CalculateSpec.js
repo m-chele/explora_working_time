@@ -28,8 +28,8 @@ describe ('Calculate' , function(){
 
     it ( 'should render worked time in hours and minutes', function(){    
 
-        expect(workedTime(1000 * 60)).toBe("worked \n" + 0 + " hours and " + 1 + " minutes\nin the selected period");
-        
+        expect(workedTime(1000 * 60).hours).toBe(0);
+        expect(workedTime(1000 * 60).minutes).toBe(1);
     });
 
 

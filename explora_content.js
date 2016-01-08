@@ -6,11 +6,15 @@ chrome.runtime.onMessage.addListener (
         var checkinSpan = $(this).find("span.entrata");
         var checkoutSpan = $(this).find("span.uscita");
         var validSpanCount = checkinSpan.size() + checkoutSpan.size();
+        
         if(validSpanCount > 0 && validSpanCount != 4)
         {
           $(this).css("background-color","red");
         }
 
+        // Exclude:
+        //    days with missing checks 
+        //    day with more then 2 checkin and 2 checkout
         if(validSpanCount == 4)
         {
           var morningCheckin = getMillisecondsFromText($(checkinSpan.get(0)).text());

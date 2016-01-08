@@ -8,3 +8,10 @@ manifest.json
 https://robots.thoughtbot.com/how-to-make-a-chrome-extension
 
 http://code.tutsplus.com/tutorials/developing-google-chrome-extensions--net-33076
+
+
+TODO
+-----
+* notificare errori nelle timbrature nel risultato del calcolo
+* considerare più entrate/uscite giornaliere
+* rimuovere jQuery
