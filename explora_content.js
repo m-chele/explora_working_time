@@ -1,14 +1,7 @@
-// rimane in ascolto dei messaggi che arrivano dallo script in background
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-    if( request.message === "calculate_hours" ) {
-            alert("cose dal popup.js calculate hours");
-            // TODO: da qui non vedo il div che è su popup.html
-            $('#mioResult').html('ciao'); 
-    }
-
-
-    if( request.message === "clicked_browser_action" ) {
+chrome.runtime.onMessage.addListener (
+    function(request, sender, sendResponse) {
+        //console.log(request.message + ":" + sender.id);
+                
       var workedMilliseconds = 0;
       $("#cartTable tr").each(function(){
         var checkinSpan = $(this).find("span.entrata");
@@ -33,9 +26,8 @@ chrome.runtime.onMessage.addListener(
         }
 
       });      
-      
-      //alert(workedTime(workedMilliseconds));
-
+        sendResponse(workedTime(workedMilliseconds));
+        return true;
     }
-});
+);
 
