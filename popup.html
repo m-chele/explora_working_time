@@ -1,17 +1,45 @@
 <!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
 <html>
   <head>
-    <title>Abbello!</title>
+    <title>Explora worked time calculator</title>
     <script src="popup.js"></script>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        padding: 10px;
+        width: 300px;
+      }
+
+      div {
+        padding: 10px 0px;
+      }
+
+      div#result
+      {
+        display: none;
+      }
+      
+      span {
+        font-size: xx-large;
+      }
+    </style>
   </head>
-  <body  style="padding: 10px">
+  <body>
     <h2>Hai lavorato abbastanza?</h1>
-    <div style="width: 300px">
-    <div style="padding: 10px 0px">
+    <div>
+    <div>
       <button id="calculateButton">Calcola</button>
     </div>
-    <div style="padding: 10px 0px">
-      <span id="result">Qui il risultato</span>
+    <div id="result">
+      <div>Nel periodo selezionato hai lavorato:</div>
+      <span id="hours"></span>
+      <span id="minutes"></span>
     </div>
     </div>
   </body>

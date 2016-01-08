@@ -1,6 +1,5 @@
 chrome.runtime.onMessage.addListener (
     function(request, sender, sendResponse) {
-        //console.log(request.message + ":" + sender.id);
                 
       var workedMilliseconds = 0;
       $("#cartTable tr").each(function(){

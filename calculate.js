@@ -1,6 +1,6 @@
 
 
-function extractTime(textTime){
+function extractTime(textTime) {
   return textTime.substring(1);
 }
 
@@ -17,10 +17,9 @@ function differenceInMilliseconds(textCheckinTime, textCheckoutTime) {
 }
 
 function workedTime(workedMilliseconds){
-  
-  minutes=(workedMilliseconds/(1000*60))%60;
-  hours=Math.floor(workedMilliseconds/(1000*60*60));
 
-  return "worked \n" + hours + " hours and " + minutes+ " minutes\nin the selected period";
-
+  return {
+      minutes: (workedMilliseconds/(1000*60))%60,
+      hours: Math.floor(workedMilliseconds/(1000*60*60))
+    }
 }
