@@ -6,7 +6,7 @@ window.onload = function() {
                 
                 // send message to content script
                 chrome.tabs.sendMessage(tabs[0].id, {}, function(response) {                            
-                    document.getElementById('hours').textContent = response.minutes + " ore";                   
+                    document.getElementById('hours').textContent = response.hours + " ore";                   
                     document.getElementById('minutes').textContent = response.minutes + " minuti";
                     document.getElementById('result').style.display = 'block';
                    
