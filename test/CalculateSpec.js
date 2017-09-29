@@ -1,18 +1,5 @@
 describe ('Calculate' , function(){
 
-  describe ('time extraction from Explora formatted text' , function(){
-    it ( 'should extract time from check-in string', function(){
-
-        expect(extractTime("E08:03")).toBe("08:03");
-    });
-
-    it ( 'should extract time from check-out string', function(){
-
-        expect(extractTime("U13:59")).toBe("13:59");
-    });
-
-  });
-
   describe ('time difference calculation' , function(){
 
     it ( 'should calculate milliseconds between two times', function(){
@@ -31,7 +18,6 @@ describe ('Calculate' , function(){
         expect(workedTime(1000 * 60).hours).toBe(0);
         expect(workedTime(1000 * 60).minutes).toBe(1);
     });
-
 
   });
 });
