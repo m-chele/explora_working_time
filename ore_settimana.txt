@@ -1,0 +1,64 @@
+08.25      12.59      13.35      17.27     --8.11
+08.18      13.21           		   --5.03  tre ore mancanti
+08.25      13.03      14.09      17.18     --7.48
+08.25                              	   --
+
+
+
+###############################################################
+data: 25	
+td id="pzvuf_Grid1_24_3_viewDiv"  contiene orarai timbrature
+###############################################################
+
+<div id="pzvuf_Grid1_24_3_viewDiv" style="">
+<table>
+<tbody>
+<tr>
+<td nowrap="">
+<a href="javascript:void(0)" style="font-family: hrfont,Tahoma,Helvetica !important; color:#275F8F;" onclick="hfpr_wcartellino2c$.viewTimbra('2017-09-25','N')">
+<span style="font-weight:normal;" align="center" title="Entrata">
+&nbsp;&nbsp;&nbsp;08.25&nbsp;&nbsp;&nbsp;</span>
+</a>
+<a href="javascript:void(0)" style="font-family: hrfont,Tahoma,Helvetica !important; color:#275F8F;" onclick="hfpr_wcartellino2c$.viewTimbra('2017-09-25','N')">
+<span style="font-weight:normal;" align="center" title="Uscita">
+&nbsp;&nbsp;&nbsp;12.59&nbsp;&nbsp;&nbsp;</span>
+</a>
+<a href="javascript:void(0)" style="font-family: hrfont,Tahoma,Helvetica !important; color:#275F8F;" onclick="hfpr_wcartellino2c$.viewTimbra('2017-09-25','N')">
+<span style="font-weight:normal;" align="center" title="Entrata">
+&nbsp;&nbsp;&nbsp;13.35&nbsp;&nbsp;&nbsp;</span>
+</a>
+<a href="javascript:void(0)" style="font-family: hrfont,Tahoma,Helvetica !important; color:#275F8F;" onclick="hfpr_wcartellino2c$.viewTimbra('2017-09-25','N')">
+<span style="font-weight:normal;" align="center" title="Uscita">
+&nbsp;&nbsp;&nbsp;17.27&nbsp;&nbsp;&nbsp;</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td nowrap="">
+<span class="column_alternative_wf1">
+</span>
+<span style="font-weight:normal;" align="center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="column_alternative_wf2">
+</span>
+<span style="font-weight:normal;" align="center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="column_alternative_wf3">
+</span>
+<span style="font-weight:normal;" align="center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="column_alternative_wf4">
+</span>
+<span style="font-weight:normal;" align="center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+

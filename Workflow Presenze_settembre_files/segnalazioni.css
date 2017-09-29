@@ -1,0 +1,98 @@
+.grid_allCell{
+	border-top: 0px solid #cbcbcb;
+	border-bottom: 1px solid #CBCBCB !important;
+	border-left: 0px solid #cbcbcb;
+	border-right: 1px solid #cbcbcb !important;
+	background-color: #FFFFFF;
+	width: 24px;
+	height: 24px;
+}
+
+.grid1 .grid_cell{
+	padding:0px !important;
+}
+
+.grid1 .grid_cell_title {
+  background-color: rgba(0, 0, 0, 0);
+  background-position: center top;
+  border-bottom-width: 2px;
+	height: 22px;	
+	vertical-align: top !important;
+}
+
+.grid1 .grid_rowodd td{
+	border-right:1px solid #cbcbcb !important;
+}
+
+.grid1 .grid_row td{
+	border-right:1px solid #cbcbcb !important;
+}
+
+.grid1 .grid_navbar{
+	border-width: 0px;
+}
+
+.noTitle{
+  position: absolute;
+}
+
+.grid_allCell2{
+	border-top: 0px solid #cbcbcb;
+	border-bottom: 1px solid #CBCBCB !important;
+	border-left: 1px solid #cbcbcb !important;
+	border-right: 1px solid #cbcbcb !important;
+	background-color: #FFFFFF;
+	width: 33px;
+	height: 33px;
+	min-width: 33px;
+	max-width: 33px;
+	min-height: 33px;
+	max-height: 33px;	
+}
+
+.grid_allCell3{
+	border-top: 0px solid #cbcbcb;
+	border-bottom: 1px solid #CBCBCB !important;
+	border-left: 0px solid #cbcbcb;
+	border-right: 1px solid #cbcbcb !important;
+	background-color: #FFFFFF;
+	width: 33px;
+	height: 33px;
+	min-width: 33px;
+	max-width: 33px;
+	min-height: 33px;
+	max-height: 33px;	
+}
+
+/* Usata nel layer dei totalizzatori del PF */
+.gird_borderPF {
+	border-top:0px solid #cbcbcb;
+	border-bottom: 1px solid #CBCBCB !important;
+	border-left:0px solid #cbcbcb;
+	border-right:0px solid #cbcbcb !important;
+	vertical-align:top !important;
+	padding: 4 !important;
+}
+
+/* grid2 usata per il layer dei totalizzatori PF */
+.grid2 .grid_cell_title {
+  background-color: rgba(0, 0, 0, 0);
+  background-position: center top;
+  vertical-align: top !important;
+}
+
+.grid2 .grid_cell_title {
+    background-color: transparent;
+    background-position: center top;
+    border-color: #0066ff;
+    height: 22px;
+    padding: 6px 4px 0;
+}
+
+.grid2 .grid_cell{
+	padding:0px;
+}
+
+.grid2 .grid_navbar{
+	border-width: 0px;
+}

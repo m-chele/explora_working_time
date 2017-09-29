@@ -1,0 +1,478 @@
+@font-face {font-family: 'icons8_win10';src:url('../fonts/icons8_win10.eot');src: url('../fonts/icons8_win10.eot#icons8_win10') format('embedded-opentype'), url('../fonts/icons8_win10.svg#icons8_win10') format('svg'), url('../fonts/icons8_win10.woff') format('woff'), url('../fonts/icons8_win10.ttf') format('truetype');}
+
+.Tabstrip .TabLabel, .TabLabel A:link,
+.Tabstrip .TabLabel A:visited,
+.hoverable .Tabstrip .TabLabel A:hover {
+  color:#343434 !important;
+  font-family:hrfont, century gothic, stheiti;
+  font-weight:Normal; text-transform: uppercase;
+  font-style:Normal;
+  font-size:8pt;
+  text-decoration:none;
+}
+.Tabstrip .TabLabelSel,
+.Tabstrip .TabLabelSel A:link,
+.Tabstrip .TabLabelSel A:visited,
+.hoverable .Tabstrip .TabLabelSel A:hover {
+  color:#FFFFFF !important; font-family:hrfontsemibold;
+  font-family:hrfont, century gothic, stheiti;
+  font-weight:Normal;
+  font-style:Normal;
+  font-size:8pt;
+  text-decoration:none;
+}
+.Tabstrip .tabstripContainer .tab_item {
+}
+
+.hoverable .Tabstrip .tabstripContainer .tab_item:hover,
+.Tabstrip .tabstripContainer .tab_item:focus{
+  font-weight:Bold;
+}
+.hoverable .Tabstrip .tabstripContainer .tab_item:hover .tab_span a,
+.hoverable .Tabstrip .tabstripContainer .tab_item:hover .tab_span a:link,
+.hoverable .Tabstrip .tabstripContainer .tab_item:hover .tab_span a:visited,
+.hoverable .Tabstrip .tabstripContainer .tab_item:hover .tab_span a:active,
+.hoverable .Tabstrip .tabstripContainer .tab_item:hover .tab_span a:hover{
+  color:#000000;
+}
+.Tabstrip .tabstripContainer .tab_item.selected,
+.hoverable .Tabstrip .tabstripContainer .tab_item:hover.selected{
+  font-weight:Normal;
+  font-style:Normal;
+}
+.Tabstrip .tabstripContainer .tab_item.selected .tab_span a:not(.tab_close),
+.hoverable .Tabstrip .tabstripContainer .tab_item.selected:hover .tab_span a:not(.tab_close){
+  color:#FFFFFF !important; font-family:hrfontsemibold;
+  cursor: default;
+}
+.Tabstrip.tabWrapper{
+  height:30px;
+}
+.Tabstrip.tabWrapper .tabstripContainer{
+  font-family: hrfont, century gothic, stheiti;
+  font-weight: Normal; text-transform: uppercase;
+  font-style: Normal;
+  font-size: 8pt;
+  text-align: left;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.Tabstrip.tabWrapper .tabBack{
+  display:none;
+  height: 30px;
+  width:26px;
+  background: url(../SpTheme_ZIP/formPage/tab_strip_button_left_dis.gif) no-repeat center center;
+  left:0;
+  top:0;
+  position:absolute;
+  z-index:5;
+}
+.Tabstrip.tabWrapper .tabBack::after {
+  line-height: 30px;
+  width: 26px;
+  display: inline-block;
+  text-align: center;
+}
+.Tabstrip.tabWrapper .tabBack.active{
+  cursor: pointer;
+  background: url(../SpTheme_ZIP/formPage/tab_strip_button_left.gif) no-repeat center center;
+}
+.Tabstrip.tabWrapper .tabNext{
+  display:none;
+  height: 30px;
+  width:26px;
+  background: url(../SpTheme_ZIP/formPage/tab_strip_button_right_dis.gif) no-repeat center center;
+  right:0;
+  top:0;
+  position:absolute;
+  z-index:1;
+}
+.Tabstrip.tabWrapper .tabNext::after {
+  line-height: 30px;
+  width: 26px;
+  display: inline-block;
+  text-align: center;
+}
+.Tabstrip.tabWrapper .tabNext.active{
+  cursor: pointer;
+  background: url(../SpTheme_ZIP/formPage/tab_strip_button_right.gif) no-repeat center center;
+}
+
+.hoverable .Tabstrip.tabWrapper .tabBack:hover,
+.hoverable .Tabstrip.tabWrapper .tabNext:hover{
+}
+.hoverable .Tabstrip.tabWrapper .tabBack.active:hover,
+.hoverable .Tabstrip.tabWrapper .tabNext.active:hover{
+}
+
+.Tabstrip.tabWrapper .tabs_mask{
+  margin:0;
+  margin-left:26px;
+  margin-right:26px;
+  overflow:hidden;
+  height:30px;
+  min-height:30px;
+}
+.Tabstrip.tabWrapper .tabs_row{
+  display:block;
+  height:30px;
+  min-height:30px;
+  width:50800px;
+  position:absolute;
+  margin:0;
+}
+.Tabstrip.tabWrapper .spazio{
+  height:30px;
+  min-height:30px;
+  width:11px;
+  display:inline-block;
+  zoom:1;
+  vertical-align: bottom;
+}
+.Tabstrip.tabWrapper .tab.useStyleColor .spazio{
+  display: none;
+}
+
+.Tabstrip.tabWrapper .tab,
+.Tabstrip.tabWrapper .tab_item{
+  display:inline-block;
+  zoom:1;
+  vertical-align: top;
+}
+.Tabstrip.tabWrapper .tab {
+  vertical-align: baseline;
+}
+.Tabstrip.tabWrapper .tab_border{
+  height:30px;
+  width:1px;
+  display:inline-block;
+  vertical-align:bottom;
+  zoom:1;
+  background-position: center center;
+}
+.Tabstrip.tabWrapper .tab.useStyleColor .tab_border {
+  display: none;
+}
+.Tabstrip.tabWrapper .tab_sep{
+  height:30px;
+  width:1px;
+  display:inline-block;
+  vertical-align:bottom;
+  zoom:1;
+}
+.Tabstrip.tabWrapper .tab_item.selected .tab_sep{
+}
+.Tabstrip.tabWrapper .tab:not(.useStyleColor) .tab_content{
+  height:30px;
+  display:inline-block;
+  background-position:left center;
+  vertical-align:middle;
+  zoom:1;
+  box-sizing:border-box;
+}
+.Tabstrip.tabWrapper .tab_item.selected .tab_content{
+  box-sizing:border-box;
+}
+.Tabstrip.tabWrapper .tab_close{
+  padding-left:4px;
+  cursor: pointer;
+  color:rgba(255,255,255,0.87);
+}
+.Tabstrip.tabWrapper .tab_close:before{
+  font-family:icons8_win10;
+  font-size:13px;
+  content:"\F048";
+  vertical-align:middle;
+}
+.Tabstrip.tabWrapper .tab_modallayer{
+  padding-left:4px;
+  display:inline-block;
+  color:rgba(255,255,255,0.87);
+}
+.Tabstrip.tabWrapper .tab_modallayer:before{
+  font-family:icons8_win10;
+  font-size:13px;
+  content:"\E956";
+  vertical-align:middle;
+}
+.Tabstrip.tabWrapper .tab:not(.useStyleColor) .tab_center_text{
+  position:relative;
+  display:inline-block;
+  text-align:center;
+  vertical-align:middle;
+}
+
+.Tabstrip.tabWrapper .tab.useStyleColor a,
+.hoverable .Tabstrip.tabWrapper .tab.useStyleColor a:hover {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 30px;
+}
+.Tabstrip.tabWrapper .tab_item.selected .tab.useStyleColor a,
+.hoverable .Tabstrip.tabWrapper .tab_item.selected .tab.useStyleColor a:hover {
+}
+
+.Tabstrip.tabWrapper .tab:not(.useStyleColor) .tab_span {
+  display:inline-block;
+  padding-top:0px;
+  min-height:30px;
+  height:30px;
+  vertical-align:middle;
+}
+.Tabstrip.tabWrapper .tab:not(.useStyleColor) .tab_item.selected .tab_span {
+  display:inline-block;
+  padding-top:0px;
+  min-height:30px;
+  height:30px;
+  vertical-align:middle;
+}
+.Tabstrip.tabWrapper .tab_span a,
+.Tabstrip.tabWrapper .tab_span a:link,
+.Tabstrip.tabWrapper .tab_span a:active,
+.hoverable .Tabstrip.tabWrapper .tab_span a:hover,
+.Tabstrip.tabWrapper .tab_span a:visited{
+  text-decoration:none;
+  color:#343434 !important;
+  font-family:hrfont, century gothic, stheiti;
+  font-weight:Normal; text-transform: uppercase;
+  font-style:Normal;
+  font-size:8pt;
+  /*vertical-align:middle;*/
+  vertical-align:top;
+}
+.Tabstrip.tabWrapper .tab_item.selected .tab_span a{
+  text-decoration:none;
+  color:#FFFFFF !important; font-family:hrfontsemibold;
+  font-family:hrfont, century gothic, stheiti;
+  font-weight:Normal;
+  font-style:Normal;
+  font-size:8pt;
+  /*vertical-align:middle;*/
+  vertical-align:top;
+}
+.Tabstrip.tabWrapper .tab_expcoll_box{
+  display:inline-block;
+  padding: 0px 0px 3px 10px;
+  vertical-align:middle;
+}
+.Tabstrip.tabWrapper .tab_expcoll_img{
+  width:5px;
+  height:16px;
+  display:inline-block;
+  background-repeat:no-repeat;
+}
+.Tabstrip.tabWrapper .tab_expcoll_img.tab_exp_img::after{
+  vertical-align: middle;
+  text-align: center;
+}
+.hoverable .Tabstrip.tabWrapper .tab_expcoll_img.tab_exp_img:hover::after{
+
+}
+
+.Tabstrip.tabWrapper .tab_expcoll_img.tab_coll_img::after{
+  vertical-align: middle;
+  text-align: center;
+}
+.hoverable .Tabstrip.tabWrapper .tab_expcoll_img.tab_coll_img:hover::after{
+
+}
+
+.WizardTabstrip.wizardWrapper {
+  height: 26px;
+}
+
+.WizardTabstrip.wizardWrapper .tabstripContainer{
+  font-family: Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: left;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.WizardTabstrip.wizardWrapper .tabs_mask{
+  margin: 0;
+  overflow: hidden;
+  height: 26px;
+  min-height: 26px;
+  display: inline-block;
+}
+.WizardTabstrip.wizardWrapper .tabs_row{
+  display: block;
+  height: 26px;
+  min-height: 26px;
+  width: 50800px;
+  position: absolute;
+  margin: 0;
+}
+.WizardTabstrip.wizardWrapper .spazio{
+  height: 26px;
+  min-height: 26px;
+  width: 0px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.WizardTabstrip.wizardWrapper .tabstripContainer .tab_item,
+.hoverable .WizardTabstrip.wizardWrapper .tabstripContainer .tab_item:hover {
+}
+.WizardTabstrip.wizardWrapper .tab,
+.WizardTabstrip.wizardWrapper .tab_item{
+  display: inline-block;
+}
+.WizardTabstrip.wizardWrapper .tab_border{
+  height: 26px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  background: transparent no-repeat center center;
+}
+.WizardTabstrip.wizardWrapper .tab_border.tab_border_right{
+  background-image: url(../SpTheme_ZIP/formPage/wizard_pagebtn_right.png);
+}
+.WizardTabstrip.wizardWrapper .tab_item.actived .tab_border.tab_border_right{
+  background-image: url(../SpTheme_ZIP/formPage/wizard_pagebtn_right_sel.png);
+}
+.WizardTabstrip.wizardWrapper .tab_item.actived .tab_border.tab_border_left {
+  background-image: url(../SpTheme_ZIP/formPage/wizard_pagebtn_left_active.png);
+}
+.WizardTabstrip.wizardWrapper .tab_sep{
+  height: 26px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  background: url(../SpTheme_ZIP/formPage/wizard_pagebtn_sep.png) repeat-x center center;
+}
+.WizardTabstrip.wizardWrapper .tab_item.actived .tab_sep {
+  background-image: url(../SpTheme_ZIP/formPage/wizard_pagebtn_sep_between_active.png);
+}
+.WizardTabstrip.wizardWrapper .tab_item.actived .tab_sep_between_active_deactive {
+  background-image: url(../SpTheme_ZIP/formPage/wizard_pagebtn_sep_sel.png);
+}
+.WizardTabstrip.wizardWrapper .tab_content{
+  height: 26px;
+  display:inline-block;
+  background-position: left center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background: url(../SpTheme_ZIP/formPage/wizard_pagebtn_center.png) repeat-x center center;
+}
+.WizardTabstrip.wizardWrapper .tab_item.actived .tab_content{
+  background-image: url(../SpTheme_ZIP/formPage/wizard_pagebtn_center_active.png);
+}
+.WizardTabstrip.wizardWrapper .tab_center_text{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.WizardTabstrip.wizardWrapper .tab_span {
+  display: inline-block;
+  min-height: 26px;
+  height: 26px;
+  line-height: 26px;
+  vertical-align: middle;
+}
+
+.WizardTabstrip.wizardWrapper .tab_span a{
+  text-decoration: none;
+  color: #000000;
+  font-family: Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.WizardTabstrip.wizardWrapper .tab_item.actived .tab_span a{
+  color: #000000;
+}
+
+.WizardTabstrip.wizardWrapper .tab_item.selected .tab_span a{
+  text-decoration: none;
+  color: #000000;
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.WizardTabstrip.wizardWrapper .tab_wizard_number {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background: url(../SpTheme_ZIP/formPage/wizard_pagebtn_number.png) no-repeat center center;
+  text-align: center;
+  color: #000000;
+  font-family: Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.WizardTabstrip.wizardWrapper .tab_item.actived .tab_wizard_number {
+  background: url(../SpTheme_ZIP/formPage/wizard_pagebtn_number_active.png) no-repeat center center;
+  color: #000000;
+  font-weight: bold;
+}
+.WizardTabstrip.wizardWrapper .tab_item.selected .tab_wizard_number {
+  background: url(../SpTheme_ZIP/formPage/wizard_pagebtn_number_sel.png) no-repeat center center;
+  color: #000000;
+  font-weight: bold;
+}
+
+.tabstripContainer  .tab_content{
+border:0px solid #dcdcdc;
+padding:3px 12px 0px 12px;
+margin-bottom:4px;
+vertical-align:top;
+height:25px;
+background-color:#e0e0e0;
+}
+
+
+.tabstripContainer  .selected .tab_content{
+background-color:#454545;
+}
+
+
+.tabstripContainer .tab_expcoll_box{
+	height: 22px;
+}
+
+.tabstripContainer  {
+padding-top:6px;
+}
+
+.tabWrapper{
+	height: 30px;
+	padding-top:0px;
+}
+.tabstripContainer .tabs_row{
+	height:30px;
+}
+
+.column_shell .tabWrapper{
+	padding-top:0px;
+	margin-top: 6px;
+}
+
+.navi_anag .tabWrapper{
+min-height:34px;
+}
+
+.anag_central .tabWrapper{
+height:35px;
+}
+
+.column1 .tabWrapper{
+height:40px;
+}
+
+
+@-moz-document url-prefix() {
+.tabstripContainer .tab_content{
+     height:22px;
+  }
+}
+
+
+
+
