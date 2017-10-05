@@ -2,10 +2,15 @@ chrome.runtime.onMessage.addListener (
     function(request, sender, sendResponse) {
       // $("span.Title").css("background-color","blue");
       var workedMilliseconds = 0;
+      // var pattern = '_Grid1_' + '27' + '_3_viewDiv';
+      // alert(pattern);
+
       $('div')
         .filter(function() {
-          return this.id.match(/_Grid1_25_3_viewDiv/);
-        }).css("background-color","green");
+          // var pattern = /_Grid1_25_3_viewDiv/;
+          var pattern = '_Grid1_' + '27' + '_3_viewDiv';
+          return this.id.match(pattern);
+        }).css("background-color","blue");
       // $("div:regex(id, *_Grid1_25_3_viewDiv)").css("background-color","red");
       // $("span select[title='Entrata']").css("background-color","red");
       // $("#pzvuf_Grid1_25_3_viewDiv").each(function(){
