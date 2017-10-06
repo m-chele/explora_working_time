@@ -1,19 +1,22 @@
 chrome.runtime.onMessage.addListener (
     function(request, sender, sendResponse) {
       var workedMilliseconds = 0;
-      var checkinSpan = $(getClockingSpanIds(1));
-      var checkoutSpan = $(getClockingSpanIds(2));
+      var morningCheckin = $(getClockingSpanIds(1));
+      var morningCheckout = $(getClockingSpanIds(2));
 
-      $(checkinSpan).css("background-color","green");
-      $(checkoutSpan).css("background-color","red");
+      var afternoonCheckin = $(getClockingSpanIds(3));
+      var afternoonCheckout = $(getClockingSpanIds(4));
 
-      var morningCheckin = getMillisecondsFromText(extractTime($(checkinSpan)));
-      var morningCheckout =  getMillisecondsFromText(extractTime($(checkoutSpan)));
+      morningCheckin.css("background-color","green");
+      afternoonCheckin.css("background-color","yellow");
 
-      var afternoonCheckin =  3000;
-      var afternoonCheckout = 3000;
+      var morningCheckinMilliseconds = getMillisecondsFromText(extractTime(morningCheckin));
+      var morningCheckoutMilliseconds =  getMillisecondsFromText(extractTime(morningCheckout));
 
-      workedMilliseconds += (morningCheckout - morningCheckin + afternoonCheckout - afternoonCheckin);
+      var afternoonCheckinMilliseconds =  getMillisecondsFromText(extractTime(afternoonCheckin));
+      var afternoonCheckoutMilliseconds = getMillisecondsFromText(extractTime(afternoonCheckout));
+
+      workedMilliseconds += (morningCheckoutMilliseconds - morningCheckinMilliseconds + afternoonCheckoutMilliseconds - afternoonCheckinMilliseconds);
 
       sendResponse(workedTime(workedMilliseconds));
       return true;
