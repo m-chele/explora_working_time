@@ -7,9 +7,10 @@ chrome.runtime.onMessage.addListener (
       var afternoonCheckin = $(getClockingSpanIds(3));
       var afternoonCheckout = $(getClockingSpanIds(4));
 
+// DEBUG
       morningCheckin.css("background-color","green");
       afternoonCheckin.css("background-color","yellow");
-
+//
       var morningCheckinMilliseconds = getMillisecondsFromText(extractTime(morningCheckin));
       var morningCheckoutMilliseconds =  getMillisecondsFromText(extractTime(morningCheckout));
 
@@ -24,12 +25,13 @@ chrome.runtime.onMessage.addListener (
 );
 
 function getClockingSpanIds(position) {
-  return '#pzvuf_Grid1_26_3_viewDiv > table > tbody > tr > td > a:nth-child(' + position + ') > span';
+  var myDiv = $('div')
+        .filter(function() {
+            return this.id.match(/_Grid1_4_3_viewDiv/);
+          });
+  return '#' + myDiv.attr('id') + ' > table > tbody > tr > td > a:nth-child(' + position + ') > span';
 }
 
-
-// //TODO: spostare
 function extractTime(textTime) {
-  // alert("text: --" + textTime.text().replace('.', ':').trim() + "--");
   return textTime.text().replace('.', ':').trim();
 }
