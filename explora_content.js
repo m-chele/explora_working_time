@@ -1,23 +1,12 @@
 chrome.runtime.onMessage.addListener (
     function(request, sender, sendResponse) {
-      // $("span.Title").css("background-color","blue");
       var workedMilliseconds = 0;
-      // var pattern = '_Grid1_' + '27' + '_3_viewDiv';
-      // alert(pattern);
 
-      $('div')
-        .filter(function() {
-          // var pattern = /_Grid1_25_3_viewDiv/;
-          var pattern = '_Grid1_' + '27' + '_3_viewDiv';
-          return this.id.match(pattern);
-        }).css("background-color","blue");
-      // $("div:regex(id, *_Grid1_25_3_viewDiv)").css("background-color","red");
-      // $("span select[title='Entrata']").css("background-color","red");
-      // $("#pzvuf_Grid1_25_3_viewDiv").each(function(){
-        // alert($("select[title='Entrata']"));
+        var checkinSpan = $(getClockingSpanIds(1));
+        var checkoutSpan = $(getClockingSpanIds(2));
 
-    //     var checkinSpan = $(this).find("span.entrata");
-    //     var checkoutSpan = $(this).find("span.uscita");
+        $(checkinSpan).css("background-color","green");
+        $(checkoutSpan).css("background-color","red");
     //     var validSpanCount = checkinSpan.size() + checkoutSpan.size();
     //
     //     if(validSpanCount > 0 && validSpanCount != 4)
@@ -45,6 +34,11 @@ chrome.runtime.onMessage.addListener (
     //     return true;
     }
 );
+
+function getClockingSpanIds(position) {
+  return '#pzvuf_Grid1_26_3_viewDiv > table > tbody > tr > td > a:nth-child(' + position + ') > span';
+}
+
 
 // //TODO: spostare
 function extractTime(textTime) {
