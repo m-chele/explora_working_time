@@ -1,37 +1,22 @@
 chrome.runtime.onMessage.addListener (
     function(request, sender, sendResponse) {
       var workedMilliseconds = 0;
+      var checkinSpan = $(getClockingSpanIds(1));
+      var checkoutSpan = $(getClockingSpanIds(2));
 
-        var checkinSpan = $(getClockingSpanIds(1));
-        var checkoutSpan = $(getClockingSpanIds(2));
+      $(checkinSpan).css("background-color","green");
+      $(checkoutSpan).css("background-color","red");
 
-        $(checkinSpan).css("background-color","green");
-        $(checkoutSpan).css("background-color","red");
-    //     var validSpanCount = checkinSpan.size() + checkoutSpan.size();
-    //
-    //     if(validSpanCount > 0 && validSpanCount != 4)
-    //     {
-    //       $(this).css("background-color","red");
-    //     }
-    //
-    //     // Exclude:
-    //     //    days with missing checks
-    //     //    day with more then 2 checkin and 2 checkout
-    //     if(validSpanCount == 4)
-    //     {
-    //       var morningCheckin = getMillisecondsFromText($(checkinSpan.get(0)).text());
-    //       var morningCheckout =  getMillisecondsFromText($(checkoutSpan.get(0)).text());
-    //
-    //       var afternoonCheckin =  getMillisecondsFromText($(checkinSpan.get(1)).text());
-    //       var afternoonCheckout = getMillisecondsFromText($(checkoutSpan.get(1)).text());
-    //
-    //       workedMilliseconds += (morningCheckout - morningCheckin + afternoonCheckout - afternoonCheckin);
-    //
-    //     }
-    //
-      // });
-    //     sendResponse(workedTime(workedMilliseconds));
-    //     return true;
+      var morningCheckin = getMillisecondsFromText(extractTime($(checkinSpan)));
+      var morningCheckout =  getMillisecondsFromText(extractTime($(checkoutSpan)));
+
+      var afternoonCheckin =  3000;
+      var afternoonCheckout = 3000;
+
+      workedMilliseconds += (morningCheckout - morningCheckin + afternoonCheckout - afternoonCheckin);
+
+      sendResponse(workedTime(workedMilliseconds));
+      return true;
     }
 );
 
@@ -42,5 +27,6 @@ function getClockingSpanIds(position) {
 
 // //TODO: spostare
 function extractTime(textTime) {
-  return textTime.replace('.', ':');
+  // alert("text: --" + textTime.text().replace('.', ':').trim() + "--");
+  return textTime.text().replace('.', ':').trim();
 }
